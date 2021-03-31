@@ -1,6 +1,6 @@
-const dotenv = require('dotenv');
-const mysql = require('mysql2');
-const express = require('express');
+import dotenv from 'dotenv';
+import mysql from 'mysql2';
+import express from 'express';
 
 dotenv.config();
 
@@ -19,7 +19,7 @@ const {
 
 const connection = mysql.createConnection({
   host: CONNECTION_HOST,
-  port: CONNECTION_PORT,
+  port: Number(CONNECTION_PORT),
   user: CONNECTION_USER,
   password: CONNECTION_PASSWORD,
   database: CONNECTION_DBNAME
