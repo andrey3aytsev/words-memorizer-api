@@ -3,8 +3,8 @@
 #### `npm run start`
 Builds the project and starts the server.
 
-#### `build`
+#### `npm run build`
 Builds the project. The build artifacts will be stored in the `build/` directory.
 
-#### `serve`
+#### `npm run serve`
 Starts dev server on http://localhost:3000/
