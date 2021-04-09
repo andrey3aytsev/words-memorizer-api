@@ -1,5 +1,5 @@
 import express from 'express';
-import { wordsRouter } from './routes/words.routes';
+import { wordsRouter } from './routes/words';
 
 const app = express();
 

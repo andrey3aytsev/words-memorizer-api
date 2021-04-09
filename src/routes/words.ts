@@ -1,5 +1,5 @@
 import express from 'express';
-import { WordsController } from '../controllers/words.controller';
+import { WordsController } from '../controllers/words';
 
 const wordsRouter = express.Router();
 wordsRouter.get('/', WordsController.query);

@@ -1,6 +1,6 @@
-import { WordsModel } from '../models/words.model';
+import { WordsModel } from '../models/words';
 import { Request, Response } from 'express-serve-static-core';
-import { apiErrorHandler } from '../utils/errorHandler';
+import { apiErrorHandler } from '../utils/errors';
 
 class WordsController {
   public static query(req: Request, res: Response): Promise<Response<WordsModel>> {
