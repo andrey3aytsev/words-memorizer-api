@@ -9,4 +9,4 @@ Builds the project and starts the server.
 Builds the project. The build artifacts will be stored in the `build/` directory.
 
 #### `npm run serve`
-Starts dev server on http://localhost:3000/
+Starts dev server
