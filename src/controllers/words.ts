@@ -17,6 +17,18 @@ class WordsController {
       })
       .catch(error => apiErrorHandler(error, req, res));
   }
+
+  public static create(req: Request, res: Response): any {
+    return WordsModel.create(req.body)
+      .then((result) => res.status(201).send(result))
+      .catch(error => apiErrorHandler(error, req, res));
+  }
+
+  public static delete(req: Request, res: Response): any {
+    return WordsModel.destroy({ where: { id: req.params.id } })
+      .then(() => res.sendStatus(200))
+      .catch(error => apiErrorHandler(error, req, res));
+  }
 }
 
 export { WordsController };

@@ -1,4 +1,6 @@
-# Words-memorizer API
+# API for words-memorizer app
+
+### Scripts:
 
 #### `npm run start`
 Builds the project and starts the server.
