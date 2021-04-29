@@ -8,8 +8,8 @@
     "start-dev": "concurrently \"npm run build-dev\" \"npm run serve-dev\"",
     "build": "npm run clean && tsc",
     "build-dev": "tsc -w",
-    "serve": "node -r dotenv/config build/server.js",
-    "serve-dev": "nodemon -r dotenv/config build/server.js",
+    "serve": "node build/server.js",
+    "serve-dev": "nodemon build/server.js",
     "clean": "rm -rf build"
   },
   "repository": {

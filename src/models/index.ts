@@ -1,11 +1,11 @@
 import { Sequelize } from 'sequelize';
-import { dbConfig } from '../db.config';
+import { env } from '../environment';
 
 const sequelize = new Sequelize(
-  dbConfig.database,
-  dbConfig.user,
-  dbConfig.password,
-  { host: dbConfig.host, dialect: dbConfig.dialect }
+  env.database,
+  env.user,
+  env.password,
+  { host: env.host, dialect: 'mysql' }
 );
 
 sequelize.authenticate()
