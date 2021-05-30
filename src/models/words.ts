@@ -17,4 +17,8 @@ WordsModel.init({
   timestamps: false
 });
 
+WordsModel.sync()
+  .then(() => console.log('WordsModel has been synchronized successfully.'))
+  .catch(err => console.error('Unable to sync WordsModel:', err));
+
 export { WordsModel };

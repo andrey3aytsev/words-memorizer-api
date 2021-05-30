@@ -5,7 +5,11 @@ const sequelize = new Sequelize(
   env.database,
   env.user,
   env.password,
-  { host: env.host, dialect: 'mysql' }
+  {
+    host: env.host,
+    dialect: 'mysql',
+    port: env.port
+  }
 );
 
 sequelize.authenticate()
