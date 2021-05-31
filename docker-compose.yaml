@@ -7,8 +7,10 @@ services:
       MYSQL_PASSWORD: $DB_USER_PASS
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
       MYSQL_DATABASE: $DB_NAME
-    ports:
-      - $MYSQL_PORT:$MYSQL_PORT
+    volumes:
+      - memorizer_volume:/var/lib/mysql
+    networks:
+      - memorizer_network
 
   app:
     build: .
@@ -18,3 +20,13 @@ services:
       DB_HOST: db
     ports:
       - $APP_PORT:$APP_PORT
+    networks:
+      - memorizer_network
+
+networks:
+  memorizer_network:
+    ipam:
+      driver: default
+
+volumes:
+  memorizer_volume:
